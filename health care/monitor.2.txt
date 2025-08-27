@@ -1,0 +1,18 @@
+import React from "react";
+
+function Monitoring() {
+  const vitals = { heartRate: 76, bp: "120/80", temp: "98.6°F" };
+
+  return (
+    <div className="p-6">
+      <h2 className="text-2xl font-bold mb-4">Real-Time Monitoring</h2>
+      <div className="bg-white p-4 shadow rounded">
+        <p>Heart Rate: {vitals.heartRate} bpm</p>
+        <p>Blood Pressure: {vitals.bp}</p>
+        <p>Temperature: {vitals.temp}</p>
+      </div>
+    </div>
+  );
+}
+
+export default Monitoring;

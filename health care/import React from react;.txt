@@ -1,0 +1,36 @@
+import React from "react";
+
+function Dashboard() {
+  const patients = [
+    { id: 1, name: "John Doe", age: 45, condition: "Diabetes" },
+    { id: 2, name: "Alice Smith", age: 30, condition: "Hypertension" },
+  ];
+
+  return (
+    <div className="p-6">
+      <h2 className="text-2xl font-bold mb-4">Patient Records</h2>
+      <table className="border w-full">
+        <thead>
+          <tr className="bg-gray-200">
+            <th className="border p-2">ID</th>
+            <th className="border p-2">Name</th>
+            <th className="border p-2">Age</th>
+            <th className="border p-2">Condition</th>
+          </tr>
+        </thead>
+        <tbody>
+          {patients.map((p) => (
+            <tr key={p.id}>
+              <td className="border p-2">{p.id}</td>
+              <td className="border p-2">{p.name}</td>
+              <td className="border p-2">{p.age}</td>
+              <td className="border p-2">{p.condition}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default Dashboard;
